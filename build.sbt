@@ -1,6 +1,6 @@
 name := "gringotts"
 
-version := "0.0.0-SNAPSHOT"
+version := "0.0.1-SNAPSHOT"
 
 organization := "me.yuhuan"
 
@@ -27,7 +27,7 @@ libraryDependencies += "org.scala-lang.modules" % "scala-xml_2.11" % "1.0.4"
 libraryDependencies += "net.liftweb" % "lift-json_2.11" % "2.6.2"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
-libraryDependencies += "me.yuhuan" %% "yutil" % "0.0.7-SNAPSHOT" changing()
+libraryDependencies += "me.yuhuan" %% "yutil" % "0.0.11-SNAPSHOT"
 //endregion
 
 
