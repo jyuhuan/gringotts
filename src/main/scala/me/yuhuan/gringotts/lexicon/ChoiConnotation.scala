@@ -10,8 +10,8 @@ import me.yuhuan.util.io.TextFile
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
 object ChoiConnotation {
-  private val data: Map[String, Map[String, String]] = {
-    val ts1 = TextFile.readLines(Inventory.ChoiConnotation).map { l =>
+  private[gringotts] val data: Map[String, Map[String, String]] = {
+    val ts1 = TextFile.readLines(Inventory.Lexicon.ChoiConnotation).map { l =>
       val parts = l.split(',')
       val wordAndPos = parts(0).split('_')
       val polarity = parts(1)
@@ -30,6 +30,13 @@ object ChoiConnotation {
 
   /**
     * Word => (PartOfSpeech => Polarity)
+    * Possible POS tags are:
+    * <ul>
+    *   <li>adjective</li>
+    *   <li>noun</li>
+    *   <li>propernoun</li>
+    *   <li>verb</li>
+    * </ul>
     */
   def apply(word: String, partOfSpeech: String): String = data(word)(partOfSpeech)
   def apply(word: String): Map[String, String] = data(word)
@@ -41,6 +48,9 @@ object ChoiConnotation {
 private object ChoiConnotationTest extends App {
   val polarity = ChoiConnotation("stupid", "adjective")
   assert(polarity == "negative")
+
+  val keys = ChoiConnotation.data.values.flatMap(_.keys).toSet
+
 
   val bp = 9
 }

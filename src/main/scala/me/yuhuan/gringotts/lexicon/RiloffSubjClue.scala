@@ -17,7 +17,7 @@ object RiloffSubjClue {
     * (Word) => (PartOfSpeech => (Polarity, StrongOrWeak))
     */
   private val data: Map[String, Map[String, (String, String)]] = {
-    val ts1 = TextFile.readLines(Inventory.RiloffSubjClue).map { l =>
+    val ts1 = TextFile.readLines(Inventory.Lexicon.RiloffSubjClue).map { l =>
       val kvPairStrings = l.split(' ')
       val word = kvPairStrings(2).split('=')(1)
       val partOfSpeech = kvPairStrings(3).split('=')(1)

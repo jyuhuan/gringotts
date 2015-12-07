@@ -1,6 +1,6 @@
 name := "gringotts"
 
-version := "0.0.3-SNAPSHOT"
+version := "0.0.4-SNAPSHOT"
 
 organization := "me.yuhuan"
 

@@ -11,7 +11,7 @@ import me.yuhuan.util.io._
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
 object DeverbalNouns extends (String ⇒ Boolean) {
-  private[gringotts] val deverbalNouns = TextFile.readLines(Inventory.DeverbalNouns).toSet
+  private[gringotts] val deverbalNouns = TextFile.readLines(Inventory.List.DeverbalNouns).toSet
   def apply(word: String) = this contains word
   def contains(word: String) = deverbalNouns contains word
 }
