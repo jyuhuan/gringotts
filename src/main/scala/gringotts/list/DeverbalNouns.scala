@@ -6,6 +6,7 @@ import me.yuhuan.util.io._
 
 /**
   * Deverbal nouns provided by NomBank.
+  * @see [[http://nlp.cs.nyu.edu/meyers/NomBank.html]]
   *
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */

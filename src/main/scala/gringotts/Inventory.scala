@@ -5,5 +5,6 @@ package gringotts
   */
 object Inventory {
   val DeverbalNouns = this.getClass.getResourceAsStream("/list/deverbal-nouns.txt")
-  val ChoiConnotation = this.getClass.getResourceAsStream("/lexicon/connotation/choi-connotation.csv")
+  val ChoiConnotation = this.getClass.getResourceAsStream("/lexicon/choi-connotation.csv")
+  val RiloffSubjClue = this.getClass.getResourceAsStream("/lexicon/riloff-subjclue.tff")
 }
