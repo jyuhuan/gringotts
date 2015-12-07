@@ -1,10 +1,11 @@
-package gringotts.lexicon
+package me.yuhuan.gringotts.lexicon
 
-import gringotts.Inventory
+import me.yuhuan.gringotts._
 import me.yuhuan.util.io.TextFile
 
 /**
   * Yejin Choi's Connotation Lexicon.
+ *
   * @see [[http://www3.cs.stonybrook.edu/~ychoi/connotation/]].
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
@@ -37,7 +38,7 @@ object ChoiConnotation {
   def contains(word: String): Boolean = data contains word
 }
 
-object ChoiConnotationTest extends App {
+private object ChoiConnotationTest extends App {
   val polarity = ChoiConnotation("stupid", "adjective")
   assert(polarity == "negative")
 

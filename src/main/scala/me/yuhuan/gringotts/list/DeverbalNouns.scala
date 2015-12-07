@@ -1,13 +1,13 @@
-package gringotts.list
+package me.yuhuan.gringotts.list
 
-import gringotts.Inventory
+import me.yuhuan.gringotts._
 import me.yuhuan.util.io._
 
 
 /**
   * Deverbal nouns provided by NomBank.
+ *
   * @see [[http://nlp.cs.nyu.edu/meyers/NomBank.html]]
-  *
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
 object DeverbalNouns extends (String ⇒ Boolean) {
@@ -16,7 +16,7 @@ object DeverbalNouns extends (String ⇒ Boolean) {
   def contains(word: String) = deverbalNouns contains word
 }
 
-object DeverbalNounsTest extends App {
+private object DeverbalNounsTest extends App {
 
   assert(DeverbalNouns contains "pollution")
 

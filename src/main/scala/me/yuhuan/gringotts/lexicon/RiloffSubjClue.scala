@@ -1,6 +1,6 @@
-package gringotts.lexicon
+package me.yuhuan.gringotts.lexicon
 
-import gringotts.Inventory
+import me.yuhuan.gringotts._
 import me.yuhuan.util.io.TextFile
 
 /**
@@ -10,7 +10,6 @@ import me.yuhuan.util.io.TextFile
   * Lines 5549 and 5550 have an extra "m" after "stemmed1=n". The "m" is deleted.
   *
   * @see [[https://www.cs.utah.edu/~riloff/pdfs/emnlp03.pdf]]
-  *
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
 object RiloffSubjClue {
@@ -48,7 +47,7 @@ object RiloffSubjClue {
   def contains(word: String): Boolean = data contains word
 }
 
-object RiloffSubjClueTest extends App {
+private object RiloffSubjClueTest extends App {
 
   val (polarity, strength) = RiloffSubjClue("abhor", "anypos")
   assert(polarity == "negative")

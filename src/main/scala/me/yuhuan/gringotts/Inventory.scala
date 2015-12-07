@@ -1,4 +1,4 @@
-package gringotts
+package me.yuhuan.gringotts
 
 /**
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
