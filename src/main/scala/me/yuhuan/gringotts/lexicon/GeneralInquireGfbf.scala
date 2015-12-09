@@ -18,6 +18,8 @@ object GeneralInquireGfbf {
 
   def apply(word: String): String = data(word)
   def contains(word: String): Boolean = data contains word
+
+  def ?(word: String): Option[String] = if (contains(word)) Some(apply(word)) else None
 }
 
 private object GeneralInquireGfbfTest extends App {

@@ -14,6 +14,8 @@ object DeverbalNouns extends (String ⇒ Boolean) {
   private[gringotts] val deverbalNouns = TextFile.readLines(Inventory.List.DeverbalNouns).toSet
   def apply(word: String) = this contains word
   def contains(word: String) = deverbalNouns contains word
+
+  def ?(word: String): Option[Boolean] = if (contains(word)) Some(apply(word)) else None
 }
 
 private object DeverbalNounsTest extends App {

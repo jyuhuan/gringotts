@@ -45,6 +45,15 @@ object RiloffSubjClue {
 
   def contains(word: String, partOfSpeech: String): Boolean = data.contains(word) && data(word).contains(partOfSpeech)
   def contains(word: String): Boolean = data contains word
+
+  def ?(word: String, partOfSpeech: String): Option[(String, String)] = {
+    if (contains(word, partOfSpeech)) Some(apply(word, partOfSpeech)) else None
+  }
+
+  def ?(word: String): Option[Map[String, (String, String)]] = {
+    if (contains(word)) Some(apply(word)) else None
+  }
+
 }
 
 private object RiloffSubjClueTest extends App {
