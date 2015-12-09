@@ -32,6 +32,16 @@ object ChoiGoodForBadFor {
     }
   }
 
+  /**
+    * Word => (PartOfSpeech => Polarity)
+    * Possible POS tags are:
+    * <ul>
+    *   <li>a</li>
+    *   <li>v</li>
+    *   <li>n</li>
+    *   <li>adv</li>
+    * </ul>
+    */
   def apply(word: String, partOfSpeech: String): String = data(word)(partOfSpeech)
   def apply(word: String): Map[String, String] = data(word)
 
@@ -40,6 +50,7 @@ object ChoiGoodForBadFor {
 }
 
 private object ChoiGoodForBadForTest extends App {
+
 
   val result = ChoiGoodForBadFor("pity")("v")
   assert(result == "goodFor")
