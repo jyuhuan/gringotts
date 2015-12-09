@@ -4,6 +4,7 @@ import me.yuhuan.gringotts.Inventory
 import me.yuhuan.util.io.TextFile
 
 /**
+  * General Inquire (with only words that appear in GFBF corpus).
   * @author Yuhuan Jiang (jyuhuan@gmail.com).
   */
 object GeneralInquireGfbf {
